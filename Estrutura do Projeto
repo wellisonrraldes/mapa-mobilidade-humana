@@ -1,0 +1,30 @@
+# 🗂️ Sistema de Atendimentos Comunitários
+
+Este projeto tem como objetivo **modelar e manipular um banco de dados relacional**, utilizando comandos SQL e práticas de controle de versão com Git e GitHub. Ele foi desenvolvido como parte de uma atividade prática de banco de dados e versionamento de código.
+
+---
+
+## 📘 Descrição
+
+O sistema simula o registro de atendimentos realizados a moradores de comunidades urbanas, como parte de iniciativas sociais ou comunitárias ligadas ao projeto *Mapa Interativo de Mobilidade Humana*. A aplicação contempla:
+
+- Cadastro de moradores;
+- Registro de atendimentos com datas, tipos e descrições;
+- Consultas relacionais entre moradores e atendimentos.
+
+---
+
+## 🏗️ Estrutura do Projeto
+
+| Arquivo         | Descrição                                      |
+|-----------------|-----------------------------------------------|
+| `schema.sql`    | Criação das tabelas com chaves e restrições.  |
+| `dados.sql`     | Inserção, atualização, remoção e consultas.   |
+| `README.md`     | Documentação do projeto.                      |
+
+---
+
+## 💾 Modelo Relacional
+
+- **Morador** (1) → (N) **Atendimento**
+
