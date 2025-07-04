@@ -1,0 +1,37 @@
+-- Criação das tabelas
+CREATE TABLE produtos (
+    id_produto INT PRIMARY KEY,
+    nome VARCHAR(100),
+    preco DECIMAL(6,2),
+    categoria VARCHAR(50)
+);
+
+CREATE TABLE pedidos (
+    id_pedido INT PRIMARY KEY,
+    data_pedido DATE,
+    valor_total DECIMAL(8,2)
+);
+
+CREATE TABLE itens_pedido (
+    id_item INT PRIMARY KEY,
+    id_pedido INT,
+    id_produto INT,
+    quantidade INT,
+    FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
+    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+);
+
+-- Inserção de dados em produtos
+INSERT INTO produtos VALUES (1, 'Café Expresso', 5.00, 'Bebida');
+INSERT INTO produtos VALUES (2, 'Pão de Queijo', 4.50, 'Salgado');
+INSERT INTO produtos VALUES (3, 'Bolo de Chocolate', 6.00, 'Doce');
+
+-- Inserção de dados em pedidos
+INSERT INTO pedidos VALUES (1, '2025-07-01', 15.50);
+INSERT INTO pedidos VALUES (2, '2025-07-02', 9.50);
+INSERT INTO pedidos VALUES (3, '2025-07-03', 6.00);
+
+-- Inserção de dados em itens_pedido
+INSERT INTO itens_pedido VALUES (1, 1, 1, 2); -- 2 cafés
+INSERT INTO itens_pedido VALUES (2, 1, 2, 1); -- 1 pão de queijo
+INSERT INTO itens_pedido VALUES (3, 2, 3, 1); -- 1 bolo
