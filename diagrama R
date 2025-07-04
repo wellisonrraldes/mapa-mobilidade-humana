@@ -1,0 +1,15 @@
+Table moradores {
+  id_morador int [pk]
+  nome varchar
+  cpf varchar [unique]
+  bairro varchar
+  telefone varchar
+}
+
+Table atendimentos {
+  id_atendimento int [pk]
+  id_morador int [ref: > moradores.id_morador]
+  data date
+  tipo varchar
+  descricao text
+}
