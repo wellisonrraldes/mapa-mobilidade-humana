@@ -1,0 +1,7 @@
+sistema-atendimentos/
+│
+├── schema.sql         ← Estrutura do banco de dados
+├── dados.sql          ← Inserções, atualizações, consultas
+├── README.md          ← Documentação do projeto
+├── LICENSE            ← (opcional) Licença do projeto
+└── imagens/           ← (opcional) Diagramas ou capturas de tela
